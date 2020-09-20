@@ -32,7 +32,7 @@ namespace Lab2.Shapes
 
         public override string ToString()
         {
-            return $"circle @({center}): r = {radius}";
+            return $"circle @({center}): r = {radius:0.0}";
         }
     }
 }

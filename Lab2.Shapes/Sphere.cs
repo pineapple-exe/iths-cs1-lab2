@@ -25,7 +25,10 @@ namespace Lab2.Shapes
 
         public override float Area
         {
-            get;
+            get
+            {
+                return (float)(4 * Math.PI * radius * radius);
+            }
         }
 
         public override float Volume

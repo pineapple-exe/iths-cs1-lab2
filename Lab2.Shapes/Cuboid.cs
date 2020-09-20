@@ -4,13 +4,6 @@ using System.Text;
 
 namespace Lab2.Shapes
 {
-    //    Denna klass ska ha en konstruktor som tar parametrar: Vector3 center, Vector3
-    //size(dvs.höjd/bredd/djup), samt en alternativ konstruktor: Vector3 center, float
-    //width(som sätter höjd, bredd djup till samma värde).
-    //Den ska även implementera en property IsCube som returnerar true om höjd,
-    //bredd och djup är lika(annars false).
-    //ToString() => “cuboid @(3.0, 4.0, 5.0): w = 4.0, h = 5.0, l=2.0” (cube om w == h ==
-    //l). 
     public class Cuboid : Shape3D
     {
         private Vector3 center;
@@ -36,7 +29,10 @@ namespace Lab2.Shapes
 
         public override float Area
         {
-            get { return (size.X * size.Y) * 2 + (size.Y * size.Z) * 2;  }
+            get 
+            {
+                return (size.X * size.Y + size.X * size.Z + size.Y * size.Z) * 2;
+            }
         }
 
         public bool IsCube

@@ -34,10 +34,8 @@ namespace Lab2.Shapes
         {
             get 
             {
-                double side = Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
-                Vector2 middlepoint = new Vector2(p1.X + p2.X / 2, p1.Y + p2.Y / 2);
-                double height = Math.Sqrt(Math.Pow(p3.X - middlepoint.X, 2) + Math.Pow(p3.Y - middlepoint.Y, 2));
-                return (float)(side * height / 2);
+                float coordinateInferno = p1.X * (p2.Y - p3.Y) + p2.X * (p3.Y - p1.Y) + p3.X * (p1.Y - p2.Y);
+                return Math.Abs(coordinateInferno) / 2;
             }
         }
 
@@ -46,7 +44,7 @@ namespace Lab2.Shapes
             get 
             { 
                 double s1 = Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
-                double s2 = Math.Sqrt(Math.Pow(p1.X - p3.X, 2) + Math.Pow(p1.X - p3.X, 2));
+                double s2 = Math.Sqrt(Math.Pow(p1.X - p3.X, 2) + Math.Pow(p1.Y - p3.Y, 2));
                 double s3 = Math.Sqrt(Math.Pow(p2.X - p3.X, 2) + Math.Pow(p2.Y - p3.Y, 2));
                 return (float)(s1 + s2 + s3);
             }

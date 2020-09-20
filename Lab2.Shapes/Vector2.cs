@@ -17,7 +17,7 @@ namespace Lab2.Shapes
 
         public override string ToString()
         {
-            return $"{X}, {Y}";
+            return $"{X:0.0}, {Y:0.0}";
         }
     }
 }
