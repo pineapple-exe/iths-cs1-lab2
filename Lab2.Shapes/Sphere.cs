@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Numerics;
 
 namespace Lab2.Shapes
 {
-    //    Konstruktor med parametrarna Vector3 center, float radius.
-    //ToString() => “sphere @(0.0, 1.0, 0.0): r = 3.2” 
     public class Sphere : Shape3D
     {
         private Vector3 center;
@@ -38,7 +38,7 @@ namespace Lab2.Shapes
 
         public override string ToString()
         {
-            return $"sphere @({center.X}, {center.Y}, {center.Z}): r = {radius}";
+            return $"sphere @({FormatVector(center)}): r = {FormatFloat(radius)}";
         }
     }
 }

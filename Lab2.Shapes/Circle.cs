@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
+using System.Numerics;
 
 namespace Lab2.Shapes
 {
@@ -32,7 +34,7 @@ namespace Lab2.Shapes
 
         public override string ToString()
         {
-            return $"circle @({center}): r = {radius:0.0}";
+            return $"circle @({FormatVector(center)}): r = {FormatFloat(radius)}";
         }
     }
 }

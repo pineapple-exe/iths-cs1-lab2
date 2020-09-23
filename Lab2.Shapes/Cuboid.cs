@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
+using System.Numerics;
 
 namespace Lab2.Shapes
 {
@@ -27,17 +29,17 @@ namespace Lab2.Shapes
             get { return new Vector3(center.X, center.Y, center.Z); }
         }
 
+        public bool IsCube
+        {
+            get { return size.X == size.Y && size.X == size.Z; }
+        }
+
         public override float Area
         {
             get 
             {
                 return (size.X * size.Y + size.X * size.Z + size.Y * size.Z) * 2;
             }
-        }
-
-        public bool IsCube
-        {
-            get { return size.X == size.Y && size.X == size.Z; }
         }
 
         public override float Volume
@@ -48,8 +50,7 @@ namespace Lab2.Shapes
         public override string ToString()
         {
             string cub = IsCube ? "cube" : "cuboid";
-
-            return $"{cub} @({center.X}, {center.Y}, {center.Z}): w = {size.X}, h = {size.Y}, l = {size.Z}";
+            return $"{cub} @({FormatVector(center)}): w = {FormatFloat(size.X)}, h = {FormatFloat(size.Y)}, l = {FormatFloat(size.Z)}";
         }
     }
 }
