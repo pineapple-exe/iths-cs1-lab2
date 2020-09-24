@@ -151,22 +151,24 @@ namespace Lab2.Shapes
             return (float)rndm.NextDouble() * 10f + 1f;
         }
 
+        private const string culture = "en-US";
+
         public static string FormatFloat(float input)
         {
             FormattableString f = $"{input:0.0}";
-            return f.ToString(new CultureInfo("en-US"));
+            return f.ToString(new CultureInfo(culture));
         }
 
         internal static string FormatVector(Vector2 v2)
         {
             FormattableString f = $"{v2.X:0.0}, {v2.Y:0.0}";
-            return f.ToString(new CultureInfo("en-US"));
+            return f.ToString(new CultureInfo(culture));
         }
 
         internal static string FormatVector(Vector3 v3)
         {
             FormattableString f = $"{v3.X:0.0}, {v3.Y:0.0}, {v3.Z:0.0}";
-            return f.ToString(new CultureInfo("en-US"));
+            return f.ToString(new CultureInfo(culture));
         }
     }
 }
