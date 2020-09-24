@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.Intrinsics;
 using Lab2.Shapes;
-using System.Numerics;
 
 namespace Lab2
 {

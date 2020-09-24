@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace Lab2.Shapes
 {
@@ -20,8 +16,7 @@ namespace Lab2.Shapes
         public Cuboid(Vector3 center, float width)
         {
             this.center = center;
-            Vector3 sz = new Vector3(width, width, width);
-            size = sz;
+            size = new Vector3(width, width, width);
         }
 
         public override Vector3 Center

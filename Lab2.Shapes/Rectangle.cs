@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace Lab2.Shapes
 {
@@ -20,10 +16,9 @@ namespace Lab2.Shapes
         public Rectangle(Vector2 center, float width)
         {
             this.center = center;
-            Vector2 sz = new Vector2(width, width);
-            size = sz;
-            
+            size = new Vector2(width, width);   
         }
+
         public override Vector3 Center
         {
             get { return new Vector3(center.X, center.Y, 0); }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Specialized;
 using System.Globalization;
 using System.Numerics;
 
@@ -137,17 +136,17 @@ namespace Lab2.Shapes
             }
         }
 
-        public static Vector3 GenVector3(Random rndm)
+        private static Vector3 GenVector3(Random rndm)
         {
             return new Vector3(GenNum(rndm), GenNum(rndm), GenNum(rndm));
         }
 
-        public static Vector2 GenVector2(Random rndm)
+        private static Vector2 GenVector2(Random rndm)
         {
             return new Vector2(GenNum(rndm), GenNum(rndm));
         }
 
-        public static float GenNum(Random rndm)
+        private static float GenNum(Random rndm)
         {
             return (float)rndm.NextDouble() * 10f + 1f;
         }
@@ -158,13 +157,13 @@ namespace Lab2.Shapes
             return f.ToString(new CultureInfo("en-US"));
         }
 
-        public static string FormatVector(Vector2 v2)
+        internal static string FormatVector(Vector2 v2)
         {
             FormattableString f = $"{v2.X:0.0}, {v2.Y:0.0}";
             return f.ToString(new CultureInfo("en-US"));
         }
 
-        public static string FormatVector(Vector3 v3)
+        internal static string FormatVector(Vector3 v3)
         {
             FormattableString f = $"{v3.X:0.0}, {v3.Y:0.0}, {v3.Z:0.0}";
             return f.ToString(new CultureInfo("en-US"));

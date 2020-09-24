@@ -1,23 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
 using System.Numerics;
 using System.Collections;
-using System.Security.Cryptography;
 
 namespace Lab2.Shapes
 {
-    //      Implementera IEnumerator och IEnumerable interfacen på klassen Triangle på
-    //      ett sådant sätt att man kan använda en foreach på instanser av Triangle för att
-    //      loopa igenom de tre vektorer som beskriver triangeln.
-    //      Vi ska alltså kunna få ut/loopa igenom triangelns punkter genom att skriva t.ex:
-    //      Triangle t = new Triangle(Vector2.Zero, Vector2.One, new Vector2(2.0f, .5f));
-    //      foreach (Vector2 v in t)
-    //      {
-    //         Console.WriteLine(v);
-    //      }
-    public class Triangle : Shape2D, IEnumerator 
+    public class Triangle : Shape2D, IEnumerator, IEnumerable
     {
         private Vector2 p1;
         private Vector2 p2;
@@ -30,8 +17,7 @@ namespace Lab2.Shapes
             this.p1 = p1;
             this.p2 = p2;
             this.p3 = p3;
-            Vector2 cntr = new Vector2((p1.X + p2.X + p3.X) / 3f, (p1.Y + p2.Y + p3.Y) / 3f);
-            center = cntr;
+            center = new Vector2((p1.X + p2.X + p3.X) / 3f, (p1.Y + p2.Y + p3.Y) / 3f);
             triPoints = new Vector2[] { this.p1, this.p2, this.p3 };
         }
 
