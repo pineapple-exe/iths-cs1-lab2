@@ -46,7 +46,15 @@ namespace Lab2
 
             Console.WriteLine($"Summan av trianglarnas omkrets: {Shape.FormatFloat(trianglesCircum)}");
             Console.WriteLine($"Den genomsnittliga arean av samtliga figurer: {Shape.FormatFloat(areas / 20)}");
-            Console.WriteLine($"Den Shape3D med störst volym: {voluminous}");
+            Console.Write("Den Shape3D med störst volym: ");
+            if (voluminous != null)
+            {
+                Console.WriteLine(voluminous);
+            }
+            else
+            {
+                Console.WriteLine("Ingen Shape3D skapades.");
+            }
         }
     }
 }
