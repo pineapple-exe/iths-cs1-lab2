@@ -1,1 +1,1 @@
-### Library for handling geometrical shapes
+# Library for handling geometrical shapes
